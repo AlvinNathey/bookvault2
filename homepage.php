@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 20px;
-    justify-items: start; /* Align items to the start */
+    justify-items: start;
 }
 .book-container {
     display: grid;
@@ -38,9 +38,9 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px; 
-    display: inline-block; /* Add this line */
-    width: 200px; /* Add this line */
-    box-sizing: border-box; /* Add this line */
+    display: inline-block;
+    width: 200px; 
+    box-sizing: border-box; 
 }
 
 .book-read,

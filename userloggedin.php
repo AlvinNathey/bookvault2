@@ -90,6 +90,7 @@ if (isset($_SESSION['logging'])) {
       </div>
 
       <!-- My Books Section -->
+      <h1>My book collection</h1>
       <div class="container">
         <h3>My Favorite Books</h3>
         <?php
@@ -156,11 +157,10 @@ if (isset($_SESSION['logging'])) {
         ?>
       </div>
 
-      <!-- Profile Section -->
-      <div class="container">
-        <h3>Profile</h3>
-        <!-- Display user profile information here -->
-      </div>
+     
+ <!-- Logout button (will have to be fixed to correct the ending of sessions)-->
+ 
+ <a href="homepage.php" style="display: block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; position: relative; bottom: 0; left: 0;">Logout</a>
 
     </body>
     </html>
