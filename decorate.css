@@ -1,4 +1,4 @@
-/* CSS code for styling the form */
+        
 
 body {
     background-color: #e4d9d9;
@@ -7,19 +7,23 @@ body {
   }
   
   h1 {
-    color: #333;
-    text-align: center;
+    color: black;
+    text-align:center;
+    text-indent: -490px; 
+
   }
-  
   form {
     max-width: 400px;
-    margin: 0 auto;
+    margin-left: 130px;
     padding: 20px;
-    background-color: #fff;
+    background-color: cream;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: darkbrown;
+  border-color: darkbrown;
   }
   
+
   label {
     display: block;
     font-weight: bold;
@@ -40,8 +44,8 @@ body {
   }
   
   input[type="submit"] {
-    background-color: #9d2f16;
-    color: #fff;
+    background-color: whitesmoke;
+    color: #333;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -51,18 +55,9 @@ body {
   input[type="submit"]:hover {
     background-color: #45a049;
   }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .success-message {
-    color: green;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  
+        body {
+            background-image: url('img/5use.jpg');      
+            background-size: cover; 
+            background-position: center; 
+            
+        }
