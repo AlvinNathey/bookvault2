@@ -53,13 +53,7 @@
                 <li class="music"> 
                     <a href="favourite-view.php">
                         <i class="fa-solid fa-star">
-                    </i>    Favourites</a></li>
-
-                <li class="muzic">
-                    <a href="catalog.php?cat=music">
-                      
-                        </i> </a></li>
-
+                    </i>    Favourites</a></li>                   
                 <li class="suggest">
                     <a href="search.php">
                         <i class="fa-solid fa-magnifying-glass">
