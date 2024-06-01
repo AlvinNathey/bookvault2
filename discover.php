@@ -132,7 +132,7 @@ function fetchBooksByGenre($genre) {
                     foreach ($books['items'] as $book):
                         $volumeInfo = $book['volumeInfo'];
                         $title = $volumeInfo['title'];
-                        $thumbnail = isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/150x200?text=No+Image';
+                        $thumbnail = isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'img/default.jpg';
                         ?>
                         <div class="book">
                             <a href="show-book-details.php?bookId=<?php echo urlencode($book['id']); ?>" style="text-decoration: none; color: inherit;">
