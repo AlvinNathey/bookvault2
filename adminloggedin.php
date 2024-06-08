@@ -26,6 +26,10 @@ $adminName = $_SESSION['admin_name'];
             background: #f7f7f8;
             border-bottom: 3px solid #87CEEB;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
         body {
             font-family: Arial, sans-serif;
@@ -34,53 +38,34 @@ $adminName = $_SESSION['admin_name'];
             padding: 0;
         }
         .welcome {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        h3 {
-            font-size: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .header .nav li a {
             color: lightslategrey;
-            display: block;
-            line-height: 30px;
-            padding: 2px 0 0;
-            width: 100px;
-            background: url('../img/book-vault-logo.png') no-repeat 0px 60px;
-            white-space: nowrap;
+            font-size: 18px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .menu div {
+            flex: 1;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-            text-decoration: none;
+            padding: 20px;
+            margin: 0px;
+            border: 1px solid #000;
             cursor: pointer;
         }
-        .genre-section {
-            margin-bottom: 40px;
+        .view-users {
+            background-color: #3c763d;
+            color: white;
         }
-        .genre-title {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .add-user {
+            background-color: #87ceeb;
+            color: black;
         }
-        .carousel {
-            display: flex;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
+        .edit-user-list {
+            background-color: #d3d3d3;
+            color: black;
         }
     </style>
 </head>
@@ -88,12 +73,33 @@ $adminName = $_SESSION['admin_name'];
 <div class="header">
     <div class="wrapper">
         <img src="img/book-vault-logo.png" alt="Book Vault Logo" style="width: 100px; height: auto;">
-        <h4 style="text-align: left;">Revolutionize Reading!</h4>
+        <h4 style="text-align: left; margin: 0;">Revolutionize Reading!</h4>
+    </div>
+    <div class="welcome">
+        Welcome, Admin <?php echo htmlspecialchars($adminName); ?>
     </div>
 </div>
-<!-- Welcome Message -->
-<div class="container">
-    <h3>Welcome, <?php echo htmlspecialchars($adminName); ?></h3>
+
+<div class="menu">
+    <div class="view-users" onclick="loadUsersTable()" style="cursor: pointer; text-decoration: none; color: inherit;">VIEW USERS</div>
+    <div class="add-user">ADD USER</div>
+    <div class="edit-user-list">EDIT USER LIST</div>
 </div>
+
+<div id="usersTableContainer"></div>
+
+<script>
+    function loadUsersTable() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "viewusers.php", true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("usersTableContainer").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.send();
+    }
+</script>
+
 </body>
 </html>
