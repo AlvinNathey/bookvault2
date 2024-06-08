@@ -152,18 +152,17 @@ $conn->close();
 </div>
 
 <div id="addUserFormContainer" class="form-container" style="display: none; text-align: center;">
-   
     <form id="addUserForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="width: 300px; margin: 0 auto; padding: 90px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <label for="username" style="display: block; margin-bottom: 10px;">Username</label>
         <input type="text" name="username" id="username" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
         <br>
-        <label for="email" style="display: block; margin-bottom: 10px;">Email
+        <label for="email" style="display: block; margin-bottom: 10px;">Email</label>
         <input type="email" name="email" id="email" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
         <br>
         <label for="password" style="display: block; margin-bottom: 10px;">Password</label>
         <input type="password" name="password" id="password" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
         <br>
-        <input type="submit" value="Add" style="width: 100%; padding: 10px; background-color: #3c763d; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+        <input type="submit" name="add_user" value="Add" style="width: 100%; padding: 10px; background-color: #3c763d; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
      </form>
 </div>
 
