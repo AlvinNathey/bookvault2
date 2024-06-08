@@ -85,14 +85,14 @@ input[type="submit"]:hover {
 </head>
 <body>
     <h1>Edit User Information</h1>
-    <form action="" method="post">
+    <form action="adminloggedin.php" method="post">
         <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" maxlength="50" required value="<?php echo $username; ?>">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" maxlength="50" required value="<?php echo $email; ?>">
         <br><br>
-        <input type="submit" value="Edit">
+        <input type="submit" name="edit_user" value="Edit">
     </form>
 </body>
 </html>
