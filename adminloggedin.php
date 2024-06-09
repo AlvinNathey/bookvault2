@@ -212,5 +212,7 @@ $conn->close();
     }
 </script>
 
+
 </body>
 </html>
+<?php include("body/footer.php"); ?>
